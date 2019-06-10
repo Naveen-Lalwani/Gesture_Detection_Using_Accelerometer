@@ -1,3 +1,13 @@
+/**
+ * @author Naveen Lalwani
+ * AndrewID: naveenl
+ * 17-722 Building User Focused Sensor Systems
+ *
+ * The following app "Knightmare" displays the value of gesture made by the
+ * accelerometer connected to the Particle Photon. The app gives the ability to
+ * any user to connect to the particle cloud and access their first photon (provided
+ * the user has an account on the cloud).
+ */
 package com.example.knightmare;
 
 import android.os.Bundle;
@@ -22,15 +32,8 @@ import io.particle.android.sdk.cloud.exceptions.ParticleCloudException;
 import io.particle.android.sdk.utils.Async;
 import io.particle.android.sdk.utils.Toaster;
 
-/**
- * @author Naveen Lalwani
- * AndrewID: naveenl
- * 17-722 Building User Focused Sensor Systems
- *
- * The following app "Knightmare" displays the value of gesture made by the
- * accelerometer connected to the Particle Photon. The app gives the ability to
- * any user to connect to the particle cloud and access their first photon (provided
- * the user has an account on the cloud).
+/*
+ * Main Activity to be performed.
  */
 public class MainActivity extends AppCompatActivity {
     /**
@@ -114,7 +117,13 @@ public class MainActivity extends AppCompatActivity {
      */
     public void startLogin(View view) {
         Async.executeAsync(ParticleCloudSDK.getCloud(), new Async.ApiWork<ParticleCloud, Object>() {
+            /*
+             * Email provided by the user.
+             */
             String email = String.valueOf(MainActivity.username.getText());
+            /*
+             * Password provided by the user.
+             */
             String password = String.valueOf(MainActivity.password.getText());
             private ParticleDevice mDevice;
             /*
@@ -132,8 +141,7 @@ public class MainActivity extends AppCompatActivity {
                 return  -1;
             }
             /**
-             * Function that will display message when the login is
-             * successful.
+             * Function that will display message when the login is successful.
              * @param value Value that is to be displayed on success
              */
             @Override
@@ -142,8 +150,7 @@ public class MainActivity extends AppCompatActivity {
                 Toaster.l(MainActivity.this, "Logged In.");
             }
             /**
-             * Function that will display message when the login is not
-             * successful.
+             * Function that will display message when the login is not successful.
              * @param e Exception raised on unsuccessful login
              */
             @Override
