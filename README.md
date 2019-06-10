@@ -7,7 +7,7 @@ The project was done in three stages:
   For this I had employed alternate sensing, which was faster acceleration would mean DOWN gesture while slower gesture would mean UP         getsure. The result of the gesture was displayed by an Android App "KnightMare" which allows you to connect to the particle cloud using     your username and password.
   
 * ## Utilizing Android Phone accelerometer to recognize hadnwritten characters drawn in air.
-  For this part, we trained a random forest using features like mean, max, 90 percentile and varianceof the accelerometer data along the X,   Y and Z axis of the accelerometer to recognize the gestures. We got a cross validation accuracy of 98%.
+  For this part, I trained a random forest classifier using features like mean, max, 90 percentile and variance of the accelerometer data     along the X, Y and Z axis of the Android Phone's accelerometer to recognize the gestures. We got a cross validation accuracy of 98%.
   
 * ## Utilizing the MPU 9250 and the particle photon and the android app.
-  For this using the same features as above, we streamed the data of accelerometer readings from the particle photon to the android phone,   where the random forest model would classfiy the gestures drawn using MPU 9250. 
+  For this using the same features as above, I streamed the data of accelerometer readings from the particle photon to the android phone,     where the random forest model would classfiy the gestures made using MPU9250 accelerometer connected to the Particle Photon Board. 
