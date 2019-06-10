@@ -2,6 +2,6 @@ For this part, I trained a random forest classifier using features like mean, ma
 
 The gestures chosen were 1, L, N and 2. The <B>trainData.arff </B>file contains the training data recorded for the mentioned gestures and the value of the features.
 
-The <B>1LN2-CrossValidation.png</B> file shows the cross validation accuracy recorded.
+The <B>1LN2_CrossValidation.png</B> file shows the cross validation accuracy recorded.
 
 The project was done employing Java Weka Library.
